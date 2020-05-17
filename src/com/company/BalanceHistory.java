@@ -3,15 +3,15 @@ package com.company;
 import java.time.LocalDate;
 
 public class BalanceHistory {
-    private static final String SALARY_MESSAGE = "Salary was equal %s in %s";
-    private Double lastBalanceSalary;
+    private static final String MESSAGE = "Last salary equals %s %s";
+    private Double lastSalary;
     private LocalDate accountChargeDate;
 
     public BalanceHistory() {
     }
 
     public Double getLastBalanceSalary() {
-        return lastBalanceSalary;
+        return lastSalary;
     }
 
     public LocalDate getAccountChargeDate() {
@@ -19,12 +19,12 @@ public class BalanceHistory {
     }
 
     public void saveHistoryAccountCharge(Double valueOfSalary) {
-        this.lastBalanceSalary = valueOfSalary;
+        this.lastSalary = valueOfSalary;
         this.accountChargeDate = LocalDate.now();
     }
 
     public void displayHistoryOfSalary() {
-        String message = String.format(SALARY_MESSAGE, this.lastBalanceSalary, this.accountChargeDate);
+        String message = String.format(MESSAGE, this.lastSalary, this.accountChargeDate);
         System.out.println(message);
     }
 }
