@@ -32,5 +32,10 @@ public class Main {
         me.getSalary();
 
 
+        System.out.println(me.toString());
+        me.getCar().turnON();
+
+
+
     }
 }

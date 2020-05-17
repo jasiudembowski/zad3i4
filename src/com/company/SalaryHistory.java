@@ -4,8 +4,10 @@ import java.time.LocalDate;
 
 public class SalaryHistory {
     private static final String MESSAGE = "Last salary equals %s %s";
-    private Double lastSalary;
+
     private LocalDate accountChargeDate;
+
+    private Double lastSalary;
 
     public SalaryHistory() {
     }
@@ -26,5 +28,7 @@ public class SalaryHistory {
     public void displayHistoryOfSalary() {
         String message = String.format(MESSAGE, this.lastSalary, this.accountChargeDate);
         System.out.println(message);
+
+
     }
 }

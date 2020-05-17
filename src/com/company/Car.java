@@ -1,9 +1,11 @@
+
+
 package com.company;
 
-public class Car implements sellACar {
-      String producer;
-     String model;
-Double value;
+public class Car extends device {
+    String producer;
+    String model;
+    private Double value;
     private Double year;
     public Car(String  producer, String model, Double year) {
         this.model = model;
@@ -21,13 +23,12 @@ Double value;
 
     public Double getvalue(){return this.value;}
 
+
+
+
     @Override
-    public void sellMe() {
+    public void turnON() {System.out.println("Yes , I'm here");
 
     }
-
-
 }
-
-
 

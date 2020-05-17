@@ -5,8 +5,8 @@ import java.math.BigDecimal;
 public class Human {
     String firstName;
     String lastName;
-   private  Phone phone;
-     Animal pet;
+    private  Phone phone;
+    Animal pet;
     private Car auto;
     private BigDecimal salary;
     private SalaryHistory SalaryHistory;
@@ -57,13 +57,27 @@ public class Human {
         this.phone = phone;
     }
 
-    public Car getCar(Car car) {
+    public Car getCar() {
 
         return car;
     }
 
     public void setCar(Car car) {
-        this.car = car;
+        if(this.salary.compareTo(BigDecimal.valueOf(car.getvalue()/1))==1 ){
+            System.out.println("You can buy it");
+            this.car=car;
+        }
+        else if( this.salary.compareTo(BigDecimal.valueOf(car.getvalue() / 12.0)) == 1)
+        {
+            System.out.println("You can take a credit");
+            this.car=car;
+
+        }
+        else
+        {
+            System.out.println("this car is too expensive sorry :/");
+        }
+
     }
 
     public Double getSalary() {
