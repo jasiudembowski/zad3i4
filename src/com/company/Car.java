@@ -1,11 +1,11 @@
 package com.company;
 
-public class Car {
-    final String producer;
-    final String model;
-private Double value;
-   private double year;
-    public Car(String  producer, String model, Integer year) {
+public class Car implements sellACar {
+      String producer;
+     String model;
+Double value;
+    private Double year;
+    public Car(String  producer, String model, Double year) {
         this.model = model;
         this.producer = producer;
         this.year = year;
@@ -15,9 +15,19 @@ private Double value;
         return year;
     }
 
-    public void setMileage(Double mileage) {
-        this.year = mileage;
+    public void setproducer(Double year) {
+        this.producer = producer;
     }
 
-    public Double getValue(){return this.value;}
+    public Double getvalue(){return this.value;}
+
+    @Override
+    public void sellMe() {
+
+    }
+
+
 }
+
+
+

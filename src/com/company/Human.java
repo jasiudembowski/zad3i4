@@ -48,7 +48,7 @@ public class Human {
         this.pet = pet;
     }
 
-    
+
     public Phone getPhone() {
         return phone;
     }
@@ -80,6 +80,10 @@ public class Human {
             this.salary = BigDecimal.valueOf(salary);
         }
     }
+    public String toString() {
+        return firstName + "   " + lastName + "   " + phone;
+    }
+
 
 
 }

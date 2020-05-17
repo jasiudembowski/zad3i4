@@ -15,7 +15,7 @@ public class Main {
 
         dog.feed();
 
-        Car golf4 = new Car("golf", "golf4", 2000);
+        Car golf4 = new Car("golf", "golf4", (double) 2000);
 
         Human me = new Human();
         me.firstName="Jan";
