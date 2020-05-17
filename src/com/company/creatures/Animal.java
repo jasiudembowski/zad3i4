@@ -1,14 +1,19 @@
-package com.company;
+package com.company.creatures;
+
+import com.company.Human;
+import com.company.sell1;
 
 import java.io.File;
 
-public class Animal implements sell1 {
+public class Animal implements feeding, sell1 {
     final String species;
-    String name;
+    public String name;
+
     static final Double STANDARD_CAT_WEIGHT = 20.0;
     File pic;
     static final Double STANDARD_DOG_WEIGHT = 70.0;
     static final Double OTHER_WEIGHT  = 1.0;
+    static final Double STANDARD_FOOD_WEIGHT=2.0;
     private Double weight;
 
 
@@ -26,6 +31,9 @@ public class Animal implements sell1 {
 
 
 
+
+
+
     public void feed() {
         weight++;
         System.out.println("New weight is" + weight);
@@ -34,6 +42,14 @@ public class Animal implements sell1 {
             System.out.println("You can't walk with dead animal");
         }
     }
+
+    @Override
+
+    public void food(int foodWeight) {
+        System.out.println(" I ate" + foodWeight );
+    }
+
+
 
     public void takeForAWalk() {
         weight--;
