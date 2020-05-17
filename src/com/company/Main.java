@@ -40,7 +40,7 @@ public class Main {
 
 
         System.out.println(me.toString());
-        me.getCar().turnON();
+
 
         try {
             me.getPet().sellMe(me, myGirlfriend, 20.0);
