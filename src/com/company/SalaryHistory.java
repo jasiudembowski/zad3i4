@@ -2,12 +2,12 @@ package com.company;
 
 import java.time.LocalDate;
 
-public class BalanceHistory {
+public class SalaryHistory {
     private static final String MESSAGE = "Last salary equals %s %s";
     private Double lastSalary;
     private LocalDate accountChargeDate;
 
-    public BalanceHistory() {
+    public SalaryHistory() {
     }
 
     public Double getLastBalanceSalary() {

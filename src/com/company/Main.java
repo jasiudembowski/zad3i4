@@ -11,8 +11,8 @@ public class Main {
 
         System.out.println("I am "+dog.name);
 
-        dog.feed();
-        dog.feed();
+
+
         dog.feed();
 
         Car golf4 = new Car("golf", "golf4", 2000);
