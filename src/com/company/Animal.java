@@ -2,7 +2,7 @@ package com.company;
 
 import java.io.File;
 
-public class Animal implements   feeding, sell {
+public class Animal implements sell1 {
     final String species;
     String name;
     static final Double STANDARD_CAT_WEIGHT = 20.0;
@@ -44,18 +44,21 @@ public class Animal implements   feeding, sell {
         }
     }
     @Override
-    public void sellMe() {
+    public void sellMe(Human seller, Human buyer, Double price) throws Exception {
         if (this.getClass().getName() == "com.company.Human") {
-            System.out.println("You can't sell pepople");
-        } else {
-            System.out.println("Price is 1500$");
+            throw new Exception("You can buy a pepople!");
         }
-    }
-
-    @Override
-    public void beEaten() {
-        weight = 0.0;
-        System.out.println("Animal is dead");
+        if (buyer.cash < price) {
+            throw new Exception("You don't have enough cash");
+        }
+        if (seller.getPet() != this) {
+            throw new Exception("It isn't your pet");
+        }
+        seller.cash += price;
+        buyer.cash -= price;
+        buyer.setPet(this);
+        seller.setPet(null);
+        System.out.println(buyer.getFirstName() + " You bought " + this + " from " + seller.getFirstName());
     }
 
 

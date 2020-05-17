@@ -1,5 +1,3 @@
-
-
 package com.company;
 
 public class Car extends device {
@@ -31,4 +29,5 @@ public class Car extends device {
 
     }
 }
+
 
